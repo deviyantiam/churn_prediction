@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "21ee0ba5-58fd-44da-a981-72ba8b63d0e3",
+		"name": "churn_prototype",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "churn_score_generation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"batch_limit\":100000,\"date_variable\":\"2022-11-15\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/churn_score_generation?batch_limit=100000&date_variable='2022-11-15'",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"churn_score_generation"
+					],
+					"query": [
+						{
+							"key": "batch_limit",
+							"value": "100000"
+						},
+						{
+							"key": "date_variable",
+							"value": "'2022-11-15'"
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "churn_score_generation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"batch_limit\":100000,\"date_variable\":\"2022-11-15\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/churn_score_generation?batch_limit=100000&date_variable='2022-11-15'",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"churn_score_generation"
+							],
+							"query": [
+								{
+									"key": "batch_limit",
+									"value": "100000"
+								},
+								{
+									"key": "date_variable",
+									"value": "'2022-11-15'"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Table prediction request accepted and running in the background. Check on /job_info to know all the tasks.",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Apr 2024 03:20:45 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "198"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"Table prediction request accepted and running in the background. Check on /job_info to know all the tasks.\",\n    \"data\": \"716b82ba-3bd9-486c-b301-18614326983d\"\n}"
+				}
+			]
+		},
+		{
+			"name": "hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": [
+				{
+					"name": "hello",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000",
+							"host": [
+								"localhost"
+							],
+							"port": "5000"
+						}
+					},
+					"status": "Hello!",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Apr 2024 03:20:48 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "\"51ee032ddab38edec17b6f90fa13c0be052e8d56\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
+						}
+					],
+					"cookie": [],
+					"body": "{\"code\": 200, \"status\": \"OK\", \"message\": \"Hello!\"}"
+				}
+			]
+		},
+		{
+			"name": "job_info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"716b82ba-3bd9-486c-b301-18614326983d\"}"
+				},
+				"url": {
+					"raw": "localhost:5000/job_info",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"job_info"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "job_info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":\"716b82ba-3bd9-486c-b301-18614326983d\"}"
+						},
+						"url": {
+							"raw": "localhost:5000/job_info",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"job_info"
+							]
+						}
+					},
+					"status": "All task running",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Apr 2024 03:21:08 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "\"a052c998a026911dae37330346bef446df7a061d\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "238"
+						}
+					],
+					"cookie": [],
+					"body": "{\"code\": 200, \"status\": 1, \"message\": \"All task running\", \"task_id\": \"716b82ba-3bd9-486c-b301-18614326983d\", \"task_name\": \"Generate_table_churn_prediction\", \"begin_time\": \"2024-04-09 10:20:45.070376\", \"end_time\": \"null\", \"messages\": null}"
+				}
+			]
+		},
+		{
+			"name": "churn_prediction_by_customer_id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"customer_id\":\"487\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/churn_prediction",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"churn_prediction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "churn_prediction_by_customer_id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"customer_id\":\"487\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/churn_prediction",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"churn_prediction"
+							]
+						}
+					},
+					"status": "Success, retrieving churn pred",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "TornadoServer/6.0.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Apr 2024 03:19:33 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"Success, retrieving churn pred\",\n    \"data\": [\n        {\n            \"customer_id\": \"487\",\n            \"p_churn\": 0.0192509494\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

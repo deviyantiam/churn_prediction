@@ -1,0 +1,13 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+
+*.sqlite3
+.DS_Store
+__pycache__/
+**/__pycache__/
+**/credentials/
+**sqlitedb/
+*.env 
+
+# models/
+sqlite/tasks.sqlite3
